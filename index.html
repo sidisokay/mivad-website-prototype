@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MI-VAD — beautifully small</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500&family=Playfair+Display:ital,wght@1,500&family=Sorts+Mill+Goudy:ital@0;1&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Fixed nav — fades in once you reach the hero -->
+<header class="nav" id="nav" aria-hidden="true">
+  <div class="nav__inner">
+    <span class="nav__logo">Mi-VAD</span>
+    <nav class="nav__menu">
+      <span class="nav__item">Demo</span>
+      <span class="nav__item">Compare <img class="nav__chev" src="assets/chevron-down.svg" alt="" /></span>
+      <span class="nav__item">Pricing</span>
+    </nav>
+    <button class="btn btn--teal">Book a call</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- 1 ─ INTRO : green field, "beautifully small" -->
+  <section class="intro" id="intro">
+    <div class="intro__bg"></div>
+    <div class="intro__fade"></div>
+    <p class="intro__caption">beautifully small</p>
+    <div class="scroll-hint" id="scrollHint">
+      <span>scroll</span>
+      <span class="scroll-hint__line"></span>
+    </div>
+  </section>
+
+  <!-- 2 ─ PRODUCT : pinned device, text changes on scroll (scroll-jack) -->
+  <section class="product" id="product">
+    <div class="product__pin">
+
+      <!-- the device stays fixed dead-center -->
+      <div class="device-stage" id="device">
+        <span class="ring ring--1"></span>
+        <span class="ring ring--2"></span>
+        <span class="ring ring--3"></span>
+        <span class="ring ring--4"></span>
+        <div class="oval">
+          <div class="oval__video"></div>
+          <div class="oval__shade"></div>
+        </div>
+        <img class="device-glow" src="assets/glow.svg" alt="" />
+        <img class="device-img" src="assets/device.png" alt="MI-VAD device" />
+      </div>
+
+      <!-- text states fade in/out around the device -->
+      <div class="states">
+        <!-- left copy : persists across state 1 + 2 -->
+        <div class="state-el state-left" data-from="0.10" data-to="0.60">
+          <img class="state-arrow state-arrow--l" src="assets/arrow-left.svg" alt="" />
+          <p class="copy-goudy">Less device<br>more freedom.</p>
+        </div>
+        <!-- right copy : state 2 -->
+        <div class="state-el state-right" data-from="0.40" data-to="0.62">
+          <img class="state-arrow state-arrow--r" src="assets/arrow-right.svg" alt="" />
+          <p class="copy-goudy">Introducing the world&rsquo;s smallest VAD</p>
+        </div>
+        <!-- state 3 : product name reveal -->
+        <div class="state-el state-name-l" data-from="0.66" data-to="0.98">
+          <p class="copy-name">Mi-VAD 2.0</p>
+        </div>
+        <div class="state-el state-name-r" data-from="0.66" data-to="0.98">
+          <p class="copy-goudy-italic">beautifully small</p>
+        </div>
+      </div>
+
+      <!-- subtle state dots -->
+      <div class="dots" id="dots">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 ─ HERO : the destination, device + video + spec tags -->
+  <section class="hero" id="hero">
+   <div class="hero__art" id="heroArt">
+    <div class="hero__stage">
+
+      <h1 class="hero__heading reveal">your heart is amazing. let&rsquo;s keep it that way</h1>
+
+      <!-- device, re-presented with the calm video behind it -->
+      <div class="device-stage device-stage--hero reveal-soft" style="--d:.15s">
+        <span class="ring ring--1"></span>
+        <span class="ring ring--2"></span>
+        <span class="ring ring--3"></span>
+        <span class="ring ring--4"></span>
+        <div class="oval">
+          <div class="oval__video"></div>
+          <div class="oval__shade"></div>
+        </div>
+        <img class="device-glow" src="assets/glow.svg" alt="" />
+        <img class="device-img" src="assets/device.png" alt="MI-VAD device" />
+      </div>
+
+      <!-- spec tags -->
+      <div class="tag tag--implant reveal" style="--d:.45s">fully implantable</div>
+      <div class="tag tag--weight reveal" style="--d:.55s">&asymp; 12.7g</div>
+      <div class="tag tag--dia reveal" style="--d:.65s">&asymp; 18mm diameter</div>
+
+      <!-- bottom-left : trusted by -->
+      <div class="hero__trusted reveal" style="--d:.7s">
+        <p class="hero__trusted-label">Trusted by leading clinicians and innovators</p>
+        <div class="hero__logos">
+          <img src="assets/logo-asana.svg" alt="Asana" />
+          <img src="assets/logo-coinbase.svg" alt="Coinbase" />
+          <img src="assets/logo-linear.svg" alt="Linear" />
+        </div>
+      </div>
+
+      <!-- bottom-right : description + CTAs -->
+      <div class="hero__aside reveal" style="--d:.8s">
+        <p class="hero__desc">MI-VAD is a new generation of cardiac support &mdash; designed to work with your heart, not replace it.</p>
+        <div class="hero__cta">
+          <button class="btn btn--teal">Learn More</button>
+          <button class="btn btn--ghost">Get in touch</button>
+        </div>
+      </div>
+
+    </div>
+   </div>
+  </section>
+
+  <!-- 4 ─ CLOSING : framed video card -->
+  <section class="closing" id="closing">
+    <figure class="video-card reveal">
+      <div class="video-card__media">
+        <button class="video-card__play" aria-label="Play video">
+          <img src="assets/play-button.svg" alt="" />
+        </button>
+      </div>
+    </figure>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
