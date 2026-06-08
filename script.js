@@ -112,4 +112,86 @@
 
   // initial paint
   kick(); chrome();
+
+  /* ============================================================
+     Narrative sections: stage scaling + scroll-driven line fill
+     (opposite-contrast overlay drawn via stroke-dashoffset, both
+     directions), block reveals, and per-word text fill.
+     ============================================================ */
+  var stages = Array.prototype.slice.call(document.querySelectorAll(".nstage"));
+  function scaleStages() {
+    var z = Math.min(1, window.innerWidth / 1440);
+    stages.forEach(function (s) { s.style.zoom = z; });
+  }
+
+  // opposite-contrast fill colours
+  var FILL = { ink: "#2d2f18", cream: "#f4f0e9" };
+
+  // build a fill overlay path for every connecting line
+  var lines = [];
+  document.querySelectorAll(".jline").forEach(function (svg) {
+    var base = svg.querySelector(".jl-base");
+    if (!base) return;
+    var fill = base.cloneNode(true);
+    fill.setAttribute("class", "jl-fill");
+    fill.setAttribute("stroke", FILL[svg.getAttribute("data-fill")] || "#2d2f18");
+    fill.removeAttribute("stroke-opacity");
+    svg.appendChild(fill);
+    var len = 0;
+    try { len = fill.getTotalLength(); } catch (e) { len = 0; }
+    fill.style.strokeDasharray = len;
+    fill.style.strokeDashoffset = len;
+    lines.push({ svg: svg, fill: fill, len: len });
+  });
+
+  // split word-fill paragraphs into per-word spans
+  var words = [];
+  document.querySelectorAll(".wordfill").forEach(function (el) {
+    var txt = el.textContent;
+    el.textContent = "";
+    txt.split(/(\s+)/).forEach(function (p) {
+      if (/^\s+$/.test(p)) { el.appendChild(document.createTextNode(p)); }
+      else if (p) {
+        var s = document.createElement("span");
+        s.className = "wf-word"; s.textContent = p;
+        el.appendChild(s);
+      }
+    });
+    words.push({ el: el, spans: Array.prototype.slice.call(el.querySelectorAll(".wf-word")) });
+  });
+
+  var reveals = Array.prototype.slice.call(document.querySelectorAll(".jreveal"));
+
+  function narrative() {
+    var vh = window.innerHeight;
+    // line fill tracks the scroll position (tip rides ~62% down the viewport)
+    for (var i = 0; i < lines.length; i++) {
+      var L = lines[i];
+      if (!L.len) continue;
+      var r = L.svg.getBoundingClientRect();
+      var p = clamp01((vh * 0.62 - r.top) / Math.max(r.height, vh * 0.28));
+      L.fill.style.strokeDashoffset = (L.len * (1 - p)).toFixed(1);
+    }
+    // block reveals (faded → full)
+    for (var j = 0; j < reveals.length; j++) {
+      var er = reveals[j].getBoundingClientRect();
+      var rp = clamp01((vh * 0.82 - er.top) / (vh * 0.32));
+      reveals[j].style.opacity = (0.2 + 0.8 * rp).toFixed(3);
+    }
+    // per-word text fill
+    for (var k = 0; k < words.length; k++) {
+      var W = words[k];
+      var wr = W.el.getBoundingClientRect();
+      var wp = clamp01((vh * 0.72 - wr.top) / (wr.height * 0.55 + vh * 0.18));
+      var lit = Math.round(wp * W.spans.length);
+      for (var n = 0; n < W.spans.length; n++) {
+        W.spans[n].classList.toggle("is-lit", n < lit);
+      }
+    }
+  }
+
+  window.addEventListener("scroll", narrative, { passive: true });
+  window.addEventListener("resize", function () { scaleStages(); narrative(); }, { passive: true });
+  scaleStages();
+  narrative();
 })();

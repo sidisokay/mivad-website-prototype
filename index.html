@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500&family=Playfair+Display:ital,wght@1,500&family=Sorts+Mill+Goudy:ital@0;1&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="styles.css?v=2" />
 </head>
 <body>
 
@@ -143,8 +143,143 @@
     </figure>
   </section>
 
+  <!-- 5 ─ THE HUMAN PROBLEM : snaking line connects nodes/text -->
+  <section class="nsec nsec--cream" id="human">
+    <div class="nstage" style="--w:1440px; --h:1610px">
+      <!-- connecting journey line (fills on scroll) -->
+      <svg class="jline" data-fill="ink" style="left:450px; top:291px; width:539.898px; height:1144.414px" viewBox="0 0 540.891 1144.41" preserveAspectRatio="none" fill="none" aria-hidden="true">
+        <path class="jl-base" vector-effect="non-scaling-stroke" stroke="#DBD6CE" d="M274.615 0V3.68358C274.615 58.9121 229.844 103.684 174.615 103.684H86.5327C39.0193 103.684 0.501845 142.2 0.500877 189.714L0.5 452.339C0.496003 506.494 44.3958 550.397 98.5503 550.397H445.611C497.954 550.397 540.386 592.828 540.389 645.171L540.391 943.321C540.391 981.267 509.63 1012.03 471.683 1012.03H370.731C315.503 1012.03 270.731 1056.8 270.731 1112.03V1144.41"/>
+      </svg>
+      <span class="jdot" style="left:724px; top:291px"></span>
+
+      <!-- heading -->
+      <div class="ngroup" style="left:50%; top:120px; transform:translateX(-50%)">
+        <span class="nlabel">THE HUMAN PROBLEM</span>
+        <h2 class="nhead" style="width:420px">When the heart starts to fail, options start to run out.</h2>
+      </div>
+
+      <!-- block 1 (left) -->
+      <div class="hblock jreveal" style="left:200px; top:501px; width:500px">
+        <span class="hnode"><img class="hnode__tex" src="assets/node-tex.png" alt=""><img class="hnode__heart" src="assets/heart-cream.svg" alt=""></span>
+        <p class="nbody" style="width:457px">Heart failure affects more than 64 million people worldwide. It is the leading cause of death on the planet — and for those whose condition becomes advanced, the path narrows quickly and options for therapy become limited.</p>
+      </div>
+
+      <!-- block 2 (right) -->
+      <div class="hblock jreveal" style="left:740px; top:948px; width:500px">
+        <span class="hnode"><img class="hnode__tex" src="assets/node-tex.png" alt=""><img class="hnode__heart" src="assets/heart-cream.svg" alt=""></span>
+        <p class="nbody" style="width:457px">Medications eventually lose their effect as the heart failure becomes more advanced. Even if eligible, cardiac transplantation depend on a donor who may never come. Unfortunately, the devices that exist today are hard to live with — with the risk of infection, stroke, bleeding, and the constant reminder of a machine inside the body.</p>
+      </div>
+
+      <!-- callout -->
+      <div class="ncallout jreveal" style="left:50%; top:1425px; transform:translateX(-50%)">
+        <span class="ncallout__pill">This isn&rsquo;t only a medical problem. It&rsquo;s a human one.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 ─ A DIFFERENT STARTING POINT : dark maroon, ECG border, word-reveal -->
+  <section class="nsec nsec--cream" id="starting">
+    <div class="nstage" style="--w:1440px; --h:1180px">
+      <div class="mcard">
+        <!-- top corner lines -->
+        <svg class="jline" data-fill="cream" style="left:0px; top:-1px; width:546.468px; height:131.686px" viewBox="0 0 546.468 131.686" preserveAspectRatio="none" fill="none" aria-hidden="true">
+          <path class="jl-base" vector-effect="non-scaling-stroke" stroke="#F1E8DF" stroke-opacity="0.28" d="M545.968 0V7.16699C545.968 62.3954 501.197 107.167 445.969 107.167L65.4843 107.167C40.5938 107.167 17.8274 116.26 0.325958 131.307"/>
+        </svg>
+        <svg class="jline" data-fill="cream" style="left:614px; top:-1px; width:546.468px; height:131.686px; transform:scaleX(-1)" viewBox="0 0 546.468 131.686" preserveAspectRatio="none" fill="none" aria-hidden="true">
+          <path class="jl-base" vector-effect="non-scaling-stroke" stroke="#F1E8DF" stroke-opacity="0.28" d="M545.968 0V7.16699C545.968 62.3954 501.197 107.167 445.969 107.167L65.4843 107.167C40.5938 107.167 17.8274 116.26 0.325958 131.307"/>
+        </svg>
+        <!-- side faint lines -->
+        <svg class="jline" data-fill="cream" style="left:0px; top:118px; width:35.668px; height:900px" viewBox="0 0 35.6677 900.233" preserveAspectRatio="none" fill="none" aria-hidden="true">
+          <path class="jl-base" vector-effect="non-scaling-stroke" stroke="#F1E8DF" stroke-opacity="0.28" d="M0.50015 900.233L0.5 76.2392C0.499994 45.9011 14.0099 18.7185 35.3417 0.379146"/>
+        </svg>
+        <svg class="jline" data-fill="cream" style="left:1125px; top:118px; width:35.668px; height:900px; transform:scaleX(-1)" viewBox="0 0 35.6677 900.233" preserveAspectRatio="none" fill="none" aria-hidden="true">
+          <path class="jl-base" vector-effect="non-scaling-stroke" stroke="#F1E8DF" stroke-opacity="0.28" d="M0.50015 900.233L0.5 76.2392C0.499994 45.9011 14.0099 18.7185 35.3417 0.379146"/>
+        </svg>
+
+        <div class="mcard__inner">
+          <span class="nlabel nlabel--cream">A DIFFERENT STARTING POINT</span>
+          <p class="nhead nhead--cream wordfill" style="width:836px">Your heart shouldn&rsquo;t be replaced. It should be supported.   MI-VAD begins with a simple belief: even if compromised with disease, the heart is remarkable, in that it continues to try and function against all the odds. Our job is to help it do what it is designed for.   So we designed something that augments the heart with each heartbeat instead of working against it. That preserves the heart&rsquo;s natural structure. That adapts to your body in real time, rather than asking your body to adapt to it.</p>
+        </div>
+
+        <!-- ECG heartbeat bottom border -->
+        <svg class="jline jline--ecg" data-fill="cream" style="left:0px; top:560px; width:1161px; height:430px" viewBox="0 0 1159.17 1280.73" preserveAspectRatio="none" fill="none" aria-hidden="true">
+          <path class="jl-base" vector-effect="non-scaling-stroke" stroke="#F1E8DF" stroke-opacity="0.28" d="M0.5 8.34285e-08L0.500097 581.041C0.500107 636.269 45.2716 681.041 100.5 681.041H344.318C348.874 681.041 352.853 677.962 353.998 673.553L367.529 621.421C368.751 616.714 375.434 616.714 376.656 621.421L405.97 734.355C407.192 739.062 413.874 739.062 415.096 734.355L428.019 684.57C428.558 682.491 430.435 681.04 432.582 681.04H463.509C465.656 681.04 467.532 679.589 468.072 677.51L470.501 668.152C471.723 663.446 478.405 663.446 479.627 668.152L482.056 677.51C482.596 679.589 484.472 681.04 486.619 681.04H515.828C517.975 681.04 519.851 679.589 520.391 677.51L533.078 628.631C534.3 623.925 540.983 623.925 542.204 628.631L565.08 716.759C566.301 721.466 572.984 721.465 574.206 716.759L582.561 684.57C583.1 682.491 584.976 681.04 587.124 681.04H608.606C610.753 681.04 612.63 682.491 613.169 684.57L613.762 686.853C614.983 691.559 621.666 691.559 622.888 686.853L656.726 556.491C657.948 551.784 664.63 551.784 665.852 556.49L712.02 734.355C713.242 739.062 719.925 739.062 721.147 734.355L734.069 684.57C734.609 682.491 736.485 681.04 738.632 681.04H746.03C748.177 681.04 750.053 679.589 750.593 677.51L753.022 668.153C754.243 663.446 760.926 663.446 762.148 668.153L769.739 697.398C770.961 702.104 777.643 702.104 778.865 697.398L793.346 641.612C794.567 636.906 801.25 636.906 802.472 641.612L811.79 677.51C812.329 679.589 814.205 681.04 816.353 681.04H1058.67C1113.89 681.04 1158.67 725.812 1158.67 781.04V1280.73"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 ─ WHAT MAKES Mi-VAD DIFFERENT -->
+  <section class="nsec nsec--cream" id="different">
+    <div class="nstage" style="--w:1440px; --h:900px">
+      <!-- incoming top-right corner line + right vertical -->
+      <svg class="jline" data-fill="ink" style="left:1300px; top:0px; width:224.125px; height:244.415px; transform:scaleY(-1)" viewBox="0 0 224.625 244.915" preserveAspectRatio="none" fill="none" aria-hidden="true">
+        <path class="jl-base" vector-effect="non-scaling-stroke" stroke="#DBD6CE" d="M224.125 1.05659e-06L224.124 144.416C224.124 199.644 179.353 244.415 124.124 244.415H0"/>
+      </svg>
+      <svg class="jline" data-fill="ink" style="left:1335px; top:244px; width:2px; height:660px" viewBox="0 0 2 660" preserveAspectRatio="none" fill="none" aria-hidden="true">
+        <path class="jl-base" vector-effect="non-scaling-stroke" stroke="#DBD6CE" d="M1 0V660"/>
+      </svg>
+
+      <div class="ngroup" style="left:50%; top:100px; transform:translateX(-50%)">
+        <span class="nlabel">WHAT MAKES Mi-VAD DIFFERENT</span>
+        <h2 class="nhead" style="width:560px">Your heart is clearly extraordinary &mdash; We&rsquo;re building something worthy of it.</h2>
+        <p class="nsub">Built to feel less like a device. More like freedom.</p>
+      </div>
+
+      <!-- feature card -->
+      <div class="fcard jreveal" style="left:256px; top:430px">
+        <div class="fcard__img"><img src="assets/diff-card.png" alt="MI-VAD device" /></div>
+        <p class="fcard__cap">Works with your natural rhythm, not against it</p>
+      </div>
+      <span class="tnode jreveal" style="left:457px; top:725px"><img src="assets/target-node.svg" alt="" /></span>
+    </div>
+  </section>
+
+  <!-- 8 ─ THE SCIENCE : green, vertical line threads 5 cards -->
+  <section class="nsec nsec--green" id="science">
+    <div class="nstage" style="--w:1440px; --h:2066px">
+      <!-- left device visual -->
+      <div class="sdevice" style="left:248px; top:181px">
+        <img class="sdevice__dots" src="assets/dots-tex.svg" alt="" />
+        <img class="sdevice__img" src="assets/science-device.png" alt="MI-VAD device" />
+      </div>
+
+      <!-- threading vertical line -->
+      <svg class="jline" data-fill="cream" style="left:990px; top:120px; width:307.317px; height:2074.31px" viewBox="0 0 308.317 2074.31" preserveAspectRatio="none" fill="none" aria-hidden="true">
+        <path class="jl-base" vector-effect="non-scaling-stroke" stroke="#F2F5EF" stroke-opacity="0.28" d="M307.817 1.10149e-06L307.817 235.498C307.817 290.727 263.045 335.498 207.817 335.498H59.0479C26.711 335.498 0.497414 361.714 0.5 394.051V2074.31"/>
+      </svg>
+
+      <!-- right column -->
+      <div class="ngroup" style="left:990px; top:120px; transform:translateX(-50%)">
+        <span class="nlabel nlabel--cream">THE SCIENCE</span>
+        <h2 class="nhead nhead--cream" style="white-space:nowrap">In sync with the body,<br>not in conflict with it.</h2>
+      </div>
+
+      <div class="scard jreveal" style="left:798px; top:430px">
+        <span class="hnode"><img class="hnode__tex" src="assets/node-tex.png" alt=""><img class="hnode__heart" src="assets/heart-cream.svg" alt=""></span>
+        <p>MI-VAD is engineered to augment the body&rsquo;s natural flow of blood.</p>
+      </div>
+      <div class="scard jreveal" style="left:798px; top:738px">
+        <span class="hnode"><img class="hnode__tex" src="assets/node-tex.png" alt=""><img class="hnode__heart" src="assets/heart-cream.svg" alt=""></span>
+        <p>Supporting circulation rather than disrupting it.</p>
+      </div>
+      <div class="scard jreveal" style="left:798px; top:1046px">
+        <span class="hnode"><img class="hnode__tex" src="assets/node-tex.png" alt=""><img class="hnode__heart" src="assets/heart-cream.svg" alt=""></span>
+        <p>By moving in harmony with each heartbeat, it delivers pulsatile, physiologic support.</p>
+      </div>
+      <div class="scard jreveal" style="left:798px; top:1380px">
+        <span class="hnode"><img class="hnode__tex" src="assets/node-tex.png" alt=""><img class="hnode__heart" src="assets/heart-cream.svg" alt=""></span>
+        <p>The kind of rhythm the body actually needs and expects.</p>
+      </div>
+      <div class="scard jreveal" style="left:798px; top:1688px">
+        <span class="hnode"><img class="hnode__tex" src="assets/node-tex.png" alt=""><img class="hnode__heart" src="assets/heart-cream.svg" alt=""></span>
+        <p>The result is cardiac support that feels more balanced, more responsive, and working in synchrony with the heart itself.</p>
+      </div>
+    </div>
+  </section>
+
 </main>
 
-<script src="script.js"></script>
+<script src="script.js?v=2"></script>
 </body>
 </html>
