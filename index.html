@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500&family=Playfair+Display:ital,wght@1,500&family=Sorts+Mill+Goudy:ital@0;1&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=2" />
+<link rel="stylesheet" href="styles.css?v=4" />
 </head>
 <body>
 
@@ -88,7 +88,12 @@
    <div class="hero__art" id="heroArt">
     <div class="hero__stage">
 
-      <h1 class="hero__heading reveal">your heart is amazing. let&rsquo;s keep it that way</h1>
+      <!-- left column : heading + description + single CTA -->
+      <div class="hero__lead">
+        <h1 class="hero__heading reveal">your heart is amazing. let&rsquo;s keep it that way</h1>
+        <p class="hero__desc reveal" style="--d:.2s">MI-VAD is a new generation of cardiac support &mdash; designed to work with your heart, not replace it.</p>
+        <button class="btn btn--teal reveal" style="--d:.3s">Explore</button>
+      </div>
 
       <!-- device, re-presented with the calm video behind it -->
       <div class="device-stage device-stage--hero reveal-soft" style="--d:.15s">
@@ -104,29 +109,10 @@
         <img class="device-img" src="assets/device.png" alt="MI-VAD device" />
       </div>
 
-      <!-- spec tags -->
+      <!-- spec tags — stepping down the right side -->
       <div class="tag tag--implant reveal" style="--d:.45s">fully implantable</div>
       <div class="tag tag--weight reveal" style="--d:.55s">&asymp; 12.7g</div>
       <div class="tag tag--dia reveal" style="--d:.65s">&asymp; 18mm diameter</div>
-
-      <!-- bottom-left : trusted by -->
-      <div class="hero__trusted reveal" style="--d:.7s">
-        <p class="hero__trusted-label">Trusted by leading clinicians and innovators</p>
-        <div class="hero__logos">
-          <img src="assets/logo-asana.svg" alt="Asana" />
-          <img src="assets/logo-coinbase.svg" alt="Coinbase" />
-          <img src="assets/logo-linear.svg" alt="Linear" />
-        </div>
-      </div>
-
-      <!-- bottom-right : description + CTAs -->
-      <div class="hero__aside reveal" style="--d:.8s">
-        <p class="hero__desc">MI-VAD is a new generation of cardiac support &mdash; designed to work with your heart, not replace it.</p>
-        <div class="hero__cta">
-          <button class="btn btn--teal">Learn More</button>
-          <button class="btn btn--ghost">Get in touch</button>
-        </div>
-      </div>
 
     </div>
    </div>
@@ -231,7 +217,10 @@
         <div class="fcard__img"><img src="assets/diff-card.png" alt="MI-VAD device" /></div>
         <p class="fcard__cap">Works with your natural rhythm, not against it</p>
       </div>
-      <span class="tnode jreveal" style="left:457px; top:725px"><img src="assets/target-node.svg" alt="" /></span>
+      <!-- carousel pagination (feature card is one of five) -->
+      <div class="fdots jreveal" style="left:50%; top:700px; transform:translateX(-50%)">
+        <span class="fdot is-active"></span><span class="fdot"></span><span class="fdot"></span><span class="fdot"></span><span class="fdot"></span>
+      </div>
     </div>
   </section>
 
@@ -278,8 +267,282 @@
     </div>
   </section>
 
+  <!-- 9 ─ PATENTS & MOMENTUM : patent figure + ringed nodes -->
+  <section class="nsec nsec--cream" id="patents">
+    <div class="nstage" style="--w:1440px; --h:1635px">
+      <!-- main vertical journey line -->
+      <svg class="jline" data-fill="ink" style="left:720px; top:0px; width:271.751px; height:1635.43px" viewBox="0 0 271.751 1635.43" preserveAspectRatio="none" fill="none" aria-hidden="true">
+        <path class="jl-base" vector-effect="non-scaling-stroke" stroke="#DBD6CE" d="M271.251 0V244.121C271.251 299.35 226.48 344.121 171.251 344.121H54.3786C24.6439 344.121 0.53912 368.226 0.53912 397.961L0.5 1635.43"/>
+      </svg>
+
+      <div class="ngroup" style="left:50%; top:120px; transform:translateX(-50%)">
+        <span class="nlabel">PATENTS &amp; MOMENTUM</span>
+        <h2 class="nhead" style="width:378px">A protected approach. Gathering pace.</h2>
+        <p class="nbody" style="width:540px">MI-VAD&rsquo;s technology is built on a portfolio of granted patents worldwide &mdash; including a third US patent awarded in 2026 &mdash; covering natural flow support, less disruptive implant design, pulsatile physiologic function, and a scalable platform for multiple heart conditions.</p>
+      </div>
+
+      <!-- central patent figure in an oval -->
+      <div class="poval jreveal" style="left:479px; top:709px"><img src="assets/patent-fig.png" alt="MI-VAD patent figure" /></div>
+
+      <!-- connector lines (oval → node) -->
+      <svg class="jline" data-fill="ink" style="left:954px; top:678px; width:96.68px; height:134.019px" viewBox="0 0 96.6796 134.019" preserveAspectRatio="none" fill="none" aria-hidden="true"><path class="jl-base" vector-effect="non-scaling-stroke" stroke="#DBD6CE" d="M96.6796 0.5C73.1338 0.5 54.0461 19.5876 54.0461 43.1335V79.4734C54.0461 109.322 29.8488 133.519 0 133.519"/></svg>
+      <svg class="jline" data-fill="ink" style="left:954px; top:887px; width:96.68px; height:134.019px; transform:scaleY(-1)" viewBox="0 0 96.6796 134.019" preserveAspectRatio="none" fill="none" aria-hidden="true"><path class="jl-base" vector-effect="non-scaling-stroke" stroke="#DBD6CE" d="M96.6796 0.5C73.1338 0.5 54.0461 19.5876 54.0461 43.1335V79.4734C54.0461 109.322 29.8488 133.519 0 133.519"/></svg>
+      <svg class="jline" data-fill="ink" style="left:389px; top:678px; width:96.68px; height:134.019px; transform:scaleX(-1)" viewBox="0 0 96.6796 134.019" preserveAspectRatio="none" fill="none" aria-hidden="true"><path class="jl-base" vector-effect="non-scaling-stroke" stroke="#DBD6CE" d="M96.6796 0.5C73.1338 0.5 54.0461 19.5876 54.0461 43.1335V79.4734C54.0461 109.322 29.8488 133.519 0 133.519"/></svg>
+      <svg class="jline" data-fill="ink" style="left:389px; top:887px; width:96.68px; height:134.019px; transform:scale(-1,-1)" viewBox="0 0 96.6796 134.019" preserveAspectRatio="none" fill="none" aria-hidden="true"><path class="jl-base" vector-effect="non-scaling-stroke" stroke="#DBD6CE" d="M96.6796 0.5C73.1338 0.5 54.0461 19.5876 54.0461 43.1335V79.4734C54.0461 109.322 29.8488 133.519 0 133.519"/></svg>
+
+      <!-- nodes -->
+      <span class="pnode pnode--l jreveal" style="left:190px;  top:660px"><span class="pnode__t">Natural Flow Support</span><span class="pbadge"><img src="assets/heart-cream.svg" alt=""></span></span>
+      <span class="pnode pnode--r jreveal" style="left:1051px; top:660px"><span class="pbadge"><img src="assets/heart-cream.svg" alt=""></span><span class="pnode__t">Pulsatile Physiologic Function</span></span>
+      <span class="pnode pnode--l jreveal" style="left:232px;  top:994px"><span class="pnode__t" style="text-align:right">Less Disruptive Implant Design</span><span class="pbadge"><img src="assets/heart-cream.svg" alt=""></span></span>
+      <span class="pnode pnode--r jreveal" style="left:1051px; top:994px"><span class="pbadge"><img src="assets/heart-cream.svg" alt=""></span><span class="pnode__t">Scalable Platform for Multiple Heart Conditions</span></span>
+
+      <p class="nbody jreveal" style="position:absolute; left:50%; top:1200px; transform:translateX(-50%); width:540px">It&rsquo;s recognition that the idea works. And it&rsquo;s a foundation for what comes next &ndash; a disruptive technology that will change the field for the better</p>
+    </div>
+  </section>
+
+  <!-- 10 ─ THE TEAM : "the people behind MI-VAD", hover-flip bio cards -->
+  <section class="nsec nsec--cream" id="team">
+    <div class="nstage" style="--w:1440px; --h:4520px">
+      <!-- intro -->
+      <div class="ngroup" style="left:50%; top:120px; transform:translateX(-50%)">
+        <span class="nlabel">THE TEAM</span>
+        <h2 class="nhead" style="width:528px">The people behind MI-VAD.<br>In safe hands</h2>
+      </div>
+      <p class="nbody" style="position:absolute; left:50%; top:430px; transform:translateX(-50%); width:458px">MI-VAD is built by people who have spent their careers at the front line of heart care &mdash; surgeons who&rsquo;ve performed transplants, engineers who&rsquo;ve built implantable devices, clinicians who&rsquo;ve sat with patients on the hardest days.</p>
+      <p class="nbody jreveal" style="position:absolute; left:50%; top:670px; transform:translateX(-50%); width:458px">Together, they bring more than 400 years of heart transplant and advanced heart failure experience to every decision.</p>
+      <p class="nbody jreveal" style="position:absolute; left:50%; top:820px; transform:translateX(-50%); width:458px">Our Founder / inventor Sudhir K is an internationally recognised leader in the field &mdash; most recently he ran the Cardiac Transplant and Mechanical Circulatory Support Program at Mayo Clinic. He was mentored by one of the world&rsquo;s most prominent and famous heart surgeons, Professor Sir Magdi Yacoub.</p>
+
+      <!-- featured founder card (always expanded) -->
+      <article class="tcard tcard--wide jreveal" style="left:279px; top:1265px">
+        <div class="tcard__photo"><img src="assets/team-sudhir.png" alt="Sudhir Kushwaha MD" /></div>
+        <div class="tcard__body">
+          <h3 class="tcard__name">Sudhir Kushwaha MD</h3>
+          <p class="tcard__role">CEO &amp; Co-Founder</p>
+          <p class="tcard__bio">Sudhir serves as the Medical Director of Cardiac Transplant and Director of The Mechanical Circulatory Support Program at the Mayo Clinic, Rochester, Minnesota. Sudhir is a world-renowned specialist in the field of circulatory failure, cardiac transplantation and mechanical circulatory support with over 25 years experience.</p>
+          <button class="btn btn--outline-ink btn--sm">Read more</button>
+        </div>
+      </article>
+
+      <!-- photo cards flip on hover to reveal details -->
+      <article class="tflip jreveal" style="left:188px; top:1989px">
+        <div class="tflip__in">
+          <div class="tflip__face tflip__front">
+            <div class="tcard__photo tcard__photo--sq"><img src="assets/team-paul.png" alt="Paul Heney" /></div>
+            <h3 class="tcard__name">Paul Heney</h3>
+            <p class="tcard__role">Board Member &amp; Non-Executive Chairman</p>
+          </div>
+          <div class="tflip__face tflip__back">
+            <h3 class="tcard__name">Paul Heney</h3>
+            <p class="tcard__role">Board Member &amp; Non-Executive Chairman</p>
+            <p class="tcard__bio">Brings decades of board-level leadership across medical-device and life-science ventures, guiding MI-VAD&rsquo;s governance and growth.</p>
+            <button class="btn btn--outline-ink btn--sm">Read more</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Antaki — text card (shown as a flipped detail by design) -->
+      <article class="tcard tcard--text jreveal" style="left:892px; top:2183px">
+        <div class="tcard__body">
+          <h3 class="tcard__name">Dr. James F. Antaki, PhD</h3>
+          <p class="tcard__role">Technical Advisory Board Chairman</p>
+          <p class="tcard__bio">is the Lowell and Susan McAdam Professor of Heart Assist Technology in the Department of Biomedical Engineering at Cornell University and formerly served as Professor of Biomedical Engineering and Computer Science at Carnegie Mellon University.</p>
+        </div>
+        <button class="btn btn--outline-ink btn--sm">Read more</button>
+      </article>
+
+      <article class="tflip jreveal" style="left:416px; top:2725px">
+        <div class="tflip__in">
+          <div class="tflip__face tflip__front">
+            <div class="tcard__photo tcard__photo--sq"><img src="assets/team-lyle.png" alt="Dr. Lyle D. Joyce" /></div>
+            <h3 class="tcard__name">Dr. Lyle D. Joyce, MD PhD</h3>
+            <p class="tcard__role">Board Member &amp; Non-Executive Chairman</p>
+          </div>
+          <div class="tflip__face tflip__back">
+            <h3 class="tcard__name">Dr. Lyle D. Joyce, MD PhD</h3>
+            <p class="tcard__role">Board Member &amp; Non-Executive Chairman</p>
+            <p class="tcard__bio">A pioneering cardiothoracic surgeon with a distinguished career in mechanical circulatory support and heart transplantation.</p>
+            <button class="btn btn--outline-ink btn--sm">Read more</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="tflip jreveal" style="left:945px; top:3222px">
+        <div class="tflip__in">
+          <div class="tflip__face tflip__front">
+            <div class="tcard__photo tcard__photo--sq"><img src="assets/team-zain.png" alt="Dr. Zain Khalpey" /></div>
+            <h3 class="tcard__name">Dr. Zain Khalpey, MD PhD</h3>
+            <p class="tcard__role">Technical Advisory Board Chairman</p>
+          </div>
+          <div class="tflip__face tflip__back">
+            <h3 class="tcard__name">Dr. Zain Khalpey, MD PhD</h3>
+            <p class="tcard__role">Technical Advisory Board Chairman</p>
+            <p class="tcard__bio">A cardiac surgeon and researcher advancing AI-driven and regenerative approaches to advanced heart failure care.</p>
+            <button class="btn btn--outline-ink btn--sm">Read more</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="tflip jreveal" style="left:135px; top:3446px">
+        <div class="tflip__in">
+          <div class="tflip__face tflip__front">
+            <div class="tcard__photo tcard__photo--sq"><img src="assets/team-shivaram.png" alt="Dr. Shivaram P. Arunachalam" /></div>
+            <h3 class="tcard__name">Dr. Shivaram P. Arunachalam, PhD</h3>
+            <p class="tcard__role">Board Member &amp; Non-Executive Chairman</p>
+          </div>
+          <div class="tflip__face tflip__back">
+            <h3 class="tcard__name">Dr. Shivaram P. Arunachalam, PhD</h3>
+            <p class="tcard__role">Board Member &amp; Non-Executive Chairman</p>
+            <p class="tcard__bio">A biomedical engineer and researcher focused on cardiovascular imaging, device innovation and translational science.</p>
+            <button class="btn btn--outline-ink btn--sm">Read more</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="tflip jreveal" style="left:728px; top:3929px">
+        <div class="tflip__in">
+          <div class="tflip__face tflip__front">
+            <div class="tcard__photo tcard__photo--sq"><img src="assets/team-josiah.png" alt="Josiah Verkaik" /></div>
+            <h3 class="tcard__name">Josiah Verkaik</h3>
+            <p class="tcard__role">VP Engineering &amp; Advisory Liaison</p>
+          </div>
+          <div class="tflip__face tflip__back">
+            <h3 class="tcard__name">Josiah Verkaik</h3>
+            <p class="tcard__role">VP Engineering &amp; Advisory Liaison</p>
+            <p class="tcard__bio">Leads MI-VAD&rsquo;s engineering effort and coordinates the technical advisory board through design, testing and iteration.</p>
+            <button class="btn btn--outline-ink btn--sm">Read more</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 11 ─ OTHER BOARD MEMBERS : light card with a row of partners -->
+  <section class="nsec nsec--cream" id="board">
+    <div class="nstage" style="--w:1440px; --h:820px">
+      <div class="boardwrap jreveal">
+        <h2 class="nhead" style="width:520px; margin:0 auto">Other influential members<br>of the board and partners</h2>
+        <div class="boardrow">
+          <figure class="bcard"><span class="bcard__photo"><img src="assets/team-josiah.png" alt=""></span><figcaption><span class="bcard__name">Josiah Verkaik</span><span class="bcard__role">VP Engineering &amp; Advisory Liaison</span></figcaption></figure>
+          <figure class="bcard"><span class="bcard__photo"><img src="assets/team-shivaram.png" alt=""></span><figcaption><span class="bcard__name">Josiah Verkaik</span><span class="bcard__role">VP Engineering &amp; Advisory Liaison</span></figcaption></figure>
+          <figure class="bcard"><span class="bcard__photo"><img src="assets/team-zain.png" alt=""></span><figcaption><span class="bcard__name">Josiah Verkaik</span><span class="bcard__role">VP Engineering &amp; Advisory Liaison</span></figcaption></figure>
+          <figure class="bcard"><span class="bcard__photo"><img src="assets/team-lyle.png" alt=""></span><figcaption><span class="bcard__name">Josiah Verkaik</span><span class="bcard__role">VP Engineering &amp; Advisory Liaison</span></figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12 ─ THE MISSION : scattered polaroids, "a fuller one" -->
+  <section class="nsec nsec--cream" id="mission">
+    <div class="nstage" style="--w:1440px; --h:1738px">
+      <!-- threading line curving down the right (continues the journey) -->
+      <svg class="jline" data-fill="ink" style="left:720px; top:665px; width:518.431px; height:1072.789px; transform:scaleY(-1)" viewBox="0 0 519.431 1073.29" preserveAspectRatio="none" fill="none" aria-hidden="true">
+        <path class="jl-base" vector-effect="non-scaling-stroke" stroke="#DBD6CE" d="M518.931 1072.79V240C518.931 184.772 474.16 140 418.931 140H100C44.7715 140 0 95.2285 0 40V0"/>
+      </svg>
+
+      <div class="ngroup" style="left:50%; top:80px; transform:translateX(-50%)">
+        <span class="nlabel">THE MISSION</span>
+        <h2 class="nhead" style="width:420px">A longer life isn&rsquo;t enough. We all want a fuller one</h2>
+      </div>
+      <p class="nbody" style="position:absolute; left:50%; top:360px; transform:translateX(-50%); width:540px">We&rsquo;re working toward a future where people living with heart failure can move more freely, worry less, not have to think about cardiac support and spend more time on what they love.</p>
+      <p class="nbody jreveal" style="position:absolute; left:50%; top:540px; transform:translateX(-50%); width:540px">Better heart support shouldn&rsquo;t just mean more years. It should mean more life inside them</p>
+
+      <!-- scattered polaroids (real photos, Figma rotations) -->
+      <figure class="polaroid jreveal" style="left:-50px;  top:92px;  --r:-8.4deg"><span class="polaroid__img" style="background-image:url(assets/mission-cliff.jpg)"></span></figure>
+      <figure class="polaroid jreveal polaroid--lg" style="left:51px; top:340px; --r:4.8deg"><span class="polaroid__img" style="background-image:url(assets/mission-flower.jpg)"></span></figure>
+      <figure class="polaroid jreveal" style="left:1136px; top:103px; --r:12.33deg"><span class="polaroid__img" style="background-image:url(assets/mission-forest.jpg)"></span></figure>
+      <figure class="polaroid jreveal polaroid--lg" style="left:1187px; top:284px; --r:-5.75deg"><span class="polaroid__img" style="background-image:url(assets/mission-hands.jpg)"></span></figure>
+    </div>
+  </section>
+
+  <!-- 13 ─ GET INVOLVED : maroon band, role pills + CTAs + investors card -->
+  <section class="nsec nsec--maroon" id="involved">
+    <div class="nstage" style="--w:1440px; --h:1204px">
+      <span class="pnode pnode--cream pnode--r jreveal" style="left:80px;   top:118px"><span class="pbadge"><img src="assets/heart-cream.svg" alt=""></span><span class="pnode__t">Clinician</span></span>
+      <span class="pnode pnode--cream pnode--r jreveal" style="left:1200px; top:118px"><span class="pbadge"><img src="assets/heart-cream.svg" alt=""></span><span class="pnode__t">Supporter</span></span>
+      <span class="pnode pnode--cream pnode--r jreveal" style="left:80px;   top:370px"><span class="pbadge"><img src="assets/heart-cream.svg" alt=""></span><span class="pnode__t">Investors</span></span>
+      <span class="pnode pnode--cream pnode--r jreveal" style="left:1185px; top:370px"><span class="pbadge"><img src="assets/heart-cream.svg" alt=""></span><span class="pnode__t">Future Patient</span></span>
+
+      <div class="ngroup" style="left:50%; top:120px; transform:translateX(-50%)">
+        <span class="nlabel nlabel--cream">GET INVOLVED</span>
+        <h2 class="nhead nhead--cream" style="width:560px">One heart. One life.<br>Let&rsquo;s take care of both.</h2>
+        <p class="nbody nbody--cream" style="width:440px">Whether you&rsquo;re a clinician, an investor, a future patient, or someone who simply believes this matters &mdash; there&rsquo;s a place for you here.</p>
+      </div>
+
+      <div class="involved__cta">
+        <button class="btn btn--cream btn--arrow">Learn more about the technology</button>
+        <div class="involved__cta-row">
+          <button class="btn btn--outline-cream btn--arrow">Become a supporter</button>
+          <button class="btn btn--outline-cream btn--arrow">Contact the team</button>
+        </div>
+      </div>
+
+      <div class="invcard jreveal">
+        <h3 class="invcard__title">Investors</h3>
+        <p class="invcard__body">We&rsquo;ve achieved a great deal in the last few years, including engineering and animal testing, and ensured our patents are registered world-wide. We are now ready for the final push, and invite the investor community to be in touch.</p>
+        <button class="btn btn--cream btn--arrow">Contact us</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14 ─ FAQ : accordion of common questions -->
+  <section class="nsec nsec--cream" id="faq">
+    <div class="nstage" style="--w:1440px; --h:1890px">
+      <div class="ngroup" style="left:50%; top:80px; transform:translateX(-50%)">
+        <span class="nlabel">FAQs</span>
+        <h2 class="nhead" style="width:560px">Here is a small selection of some<br>of the most common questions asked</h2>
+        <p class="nsub">For further information please contact us directly.</p>
+      </div>
+
+      <div class="faq" style="position:absolute; left:50%; top:380px; transform:translateX(-50%); width:830px">
+        <div class="faq__item"><button class="faq__q">What is MI-VAD?<span class="faq__sign"></span></button><div class="faq__a"><p>MI-VAD is a new generation of ventricular assist device, designed to augment the heart with each heartbeat rather than replace it.</p></div></div>
+        <div class="faq__item"><button class="faq__q">How is MI-VAD different from conventional LVADs?<span class="faq__sign"></span></button><div class="faq__a"><p>Conventional LVADs provide continuous, non-pulsatile flow. MI-VAD works in synchrony with the heart to deliver pulsatile, physiologic support while preserving the heart&rsquo;s natural structure.</p></div></div>
+        <div class="faq__item"><button class="faq__q">What problem is MI-VAD trying to solve?<span class="faq__sign"></span></button><div class="faq__a"><p>For people with advanced heart failure, options run out quickly. MI-VAD aims to offer support that is easier to live with and works with the body rather than against it.</p></div></div>
+        <div class="faq__item"><button class="faq__q">Is MI-VAD a continuous-flow pump?<span class="faq__sign"></span></button><div class="faq__a"><p>No. MI-VAD delivers pulsatile, rhythm-synchronized support that mirrors the body&rsquo;s natural circulation.</p></div></div>
+        <div class="faq__item"><button class="faq__q">What does &ldquo;rhythm-synchronized&rdquo; mean?<span class="faq__sign"></span></button><div class="faq__a"><p>It means the device moves in time with each heartbeat, augmenting the heart&rsquo;s own contraction instead of overriding it.</p></div></div>
+        <div class="faq__item"><button class="faq__q">Why does pulsatility matter?<span class="faq__sign"></span></button><div class="faq__a"><p>Pulsatile flow is the kind of rhythm the body actually expects, and is associated with more balanced, physiologic circulatory support.</p></div></div>
+        <div class="faq__item"><button class="faq__q">What is meant by &ldquo;non-cannular architecture&rdquo;?<span class="faq__sign"></span></button><div class="faq__a"><p>MI-VAD is designed without the long inflow cannula of conventional devices, preserving more of the heart&rsquo;s natural structure.</p></div></div>
+        <div class="faq__item"><button class="faq__q">Does MI-VAD require removal of heart muscle?<span class="faq__sign"></span></button><div class="faq__a"><p>No. The architecture is designed to support the heart while preserving its natural tissue and structure.</p></div></div>
+        <div class="faq__item"><button class="faq__q">Where is the MI-VAD pump intended to be positioned?<span class="faq__sign"></span></button><div class="faq__a"><p>The pump is intended to sit in a less disruptive position than conventional implants, working alongside the heart.</p></div></div>
+        <div class="faq__item"><button class="faq__q">Can MI-VAD support the right ventricle?<span class="faq__sign"></span></button><div class="faq__a"><p>Yes. The architecture is intended to support left-sided, right-sided, or potentially biventricular applications.</p></div></div>
+      </div>
+
+      <button class="btn btn--ghost btn--arrow" style="position:absolute; left:50%; top:1700px; transform:translateX(-50%)">Browse common questions</button>
+    </div>
+  </section>
+
+  <!-- 15 ─ FOOTER : green field, watermark, AI + disclaimer band -->
+  <footer class="footer" id="footer">
+    <div class="footer__hero">
+      <span class="footer__watermark">Mi-VAD</span>
+      <p class="footer__tag">beautifully small</p>
+    </div>
+    <div class="footer__field">
+      <p class="footer__desc">A novel ventricular assist device that will transform the treatment of end-stage heart failure &mdash; increasing longevity, alleviating suffering and improving the quality of life for heart failure patients.</p>
+      <nav class="footer__nav">
+        <a href="#">Home</a><a href="#">About Us</a><a href="#team">Team</a><a href="#involved">Contact</a><a href="#">News</a>
+      </nav>
+      <div class="footer__bar">
+        <div class="footer__col">
+          <p class="footer__col-title">Explore MI-VAD with AI</p>
+          <p class="footer__col-text">Ask your preferred AI assistant about MI-VAD and its approach to heart support.</p>
+          <div class="footer__ai">
+            <span class="ai-chip">✺</span><span class="ai-chip">✳</span><span class="ai-chip">❖</span>
+          </div>
+        </div>
+        <div class="footer__col footer__col--note">
+          <p class="footer__disclaimer"><span class="footer__info">ⓘ</span> The MI-VAD ventricular assist system described in this website is currently in the research and development phase and is not approved for investigational or commercial use in the United States, the European Union or elsewhere.</p>
+          <div class="footer__badges"><span class="badge">ISO</span><span class="badge badge--ce">CE</span></div>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <span>&copy; 2026 MI-VAD Inc.</span>
+        <a href="#">Disclaimer and Terms of Use</a>
+      </div>
+    </div>
+  </footer>
+
 </main>
 
-<script src="script.js?v=2"></script>
+<script src="script.js?v=4"></script>
 </body>
 </html>

@@ -194,4 +194,18 @@
   window.addEventListener("resize", function () { scaleStages(); narrative(); }, { passive: true });
   scaleStages();
   narrative();
+
+  /* ============================================================
+     FAQ accordion — one panel open at a time, calm height ease.
+     ============================================================ */
+  document.querySelectorAll(".faq__q").forEach(function (q) {
+    q.addEventListener("click", function () {
+      var item = q.parentNode;
+      var open = item.classList.contains("is-open");
+      document.querySelectorAll(".faq__item.is-open").forEach(function (el) {
+        el.classList.remove("is-open");
+      });
+      if (!open) item.classList.add("is-open");
+    });
+  });
 })();
