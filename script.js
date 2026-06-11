@@ -71,8 +71,8 @@
         "translateY(" + ((1 - reveal) * 30).toFixed(1) + "px) scale(" + scale.toFixed(3) + ")";
     }
 
-    // state dots (3 phases)
-    var phase = p < 0.40 ? 0 : (p < 0.64 ? 1 : 2);
+    // state dots (2 phases)
+    var phase = p < 0.5 ? 0 : 1;
     dots.forEach(function (d, i) { d.classList.toggle("is-active", i === phase); });
   }
 

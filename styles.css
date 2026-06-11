@@ -194,7 +194,7 @@ body{
 }
 .hero__art{
   position:relative; width:1440px; height:824px; flex:none;
-  transform:scale(var(--hs,1)); transform-origin:center center;
+  zoom:var(--hs,1);   /* zoom (not transform:scale) — transform broke compositing/paint */
 }
 .hero__stage{ position:absolute; inset:0; }
 .hero__stage .device-stage{
@@ -551,6 +551,13 @@ body{
 /* ---- mission polaroids ---- */
 .polaroid__img{ width:207px; height:207px; }
 .polaroid--lg .polaroid__img{ width:250px; height:250px; }
+
+/* ---- product scroll-jack: large "Mi-VAD 2.0" watermark reveal ---- */
+.state-watermark{ left:50%; top:auto; bottom:7%; --tx:-50%; --ty:0px; text-align:center; }
+.copy-watermark{
+  font-family:"Sorts Mill Goudy", serif; font-size:92px; line-height:1;
+  letter-spacing:-2px; color:rgba(45,47,24,.16); white-space:nowrap;
+}
 
 /* ---- FAQ dotted separators ---- */
 .faq__item{ border-top:1px dotted rgba(45,47,24,.3); }
